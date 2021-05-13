@@ -20,11 +20,16 @@ int main()
         int j=0;
         for(j=-1;j<i;j++)
         {
-            if(days[j+1]!=d && j+1==i)
-            {
-                days[i]=d;
-                i++;
+            if(days[j+1]==d)
                 break;
+            if(days[j+1]!=d)
+            {
+                if(j+1==i)
+                {
+                    days[i]=d;
+                    i++;
+                    break;
+                }
             }
         }
         if(i==day)
